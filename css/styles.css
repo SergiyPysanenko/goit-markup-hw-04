@@ -542,13 +542,13 @@ footer {
   }
   
 .container-footer-adress {
-    width: 400px;
+    margin-right: 70px;
   }
   
 .footer-container {
     display: flex;
-    padding-inline-start: 0px;
-    margin: 0 auto;
+    align-items: baseline;
+    
   }
   
 .social-link {
