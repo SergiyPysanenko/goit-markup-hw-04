@@ -244,10 +244,10 @@ header a {
     letter-spacing: 0.06em;
   }
   
-/*.section {
+.section {
     padding-top: 94px;
     padding-bottom: 94px;
-}*/
+}
 
 .featueres {
     display: flex;
@@ -592,7 +592,6 @@ footer {
     border-radius: 4px;
     display: flex;
     justify-content: center;
-    margin-top: 94px;
     margin-bottom: 50px;
   }
   
