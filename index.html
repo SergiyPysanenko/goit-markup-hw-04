@@ -48,7 +48,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-                <button class="hero-button" type="button">Замовити послугу</button>
+                <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
         <!--our benefits-->
@@ -91,15 +91,27 @@
                 <h2 class="specificity">Чим ми займаємося</h2>
                 <ul class="specif list">
                     <li class="item">
-                        <img src="./images/prog_on_notebook.jpg" alt="Людина програмує" width="370" height="294" />
+                        <div class="specif-box"><img src="./images/prog_on_notebook.jpg" alt="Людина програмує" width="370" height="294"/>
+                            <div class="specif-box-list">
+                                <p class="specif-box-text">Десктопні додатки</p>
+                            </div>
+                        </div>
                     </li>
                     <li class="item">
-                        <img src="./images/phone_and_notebook.jpg"
-                            alt="Людина обирає дизайн додатка для відображення на смартфоні" width="370" height="294" />
+                        <div class="specif-box"><img src="./images/phone_and_notebook.jpg"
+                            alt="Людина обирає дизайн додатка для відображення на смартфоні" width="370" height="294"/>
+                            <div class="specif-box-list">
+                                <p class="specif-box-text">Мобільні додатки</p>
+                            </div>
+                        </div>
                     </li>
                     <li class="item">
-                        <img src="./images/design_tablet.jpg" alt="Людина обирає колір з палітри на планшеті"
-                            width="370" height="294" />
+                        <div class="specif-box"><img src="./images/design_tablet.jpg" alt="Людина обирає колір з палітри на планшеті"
+                            width="370" height="294"/>
+                            <div class="specif-box-list">
+                                <p class="specif-box-text">Дизайнерські рішення</p>
+                            </div>
+                        <div>    
                     </li>
                 </ul>
             </div>
@@ -366,6 +378,16 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="button-close" data-modal-close>
+                <svg width="100%" height="100%">
+                    <use xLink:href="./images/close.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
