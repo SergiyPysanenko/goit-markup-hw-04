@@ -16,8 +16,9 @@
     --white: #ffffff;
     --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
     --specif-box-color: rgba(47, 48, 58, 0.8);
+    --hover-overlay: rgba(33, 150, 243, 0.9);
     
-  }
+}
   
   /*body css*/
   
@@ -740,32 +741,91 @@ footer {
     outline: none;
   }
   
-.project-container {
+/*.project-container {
     padding: 20px 24px;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
-  }
+}*/
+
+.projects li {
+    background: var(--main-light-color);
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
+
 .project-title {
     font-weight: 700;
     font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    margin-bottom: 4px;
-    color: var(--main-font-color);
-  }
-.project-category {
-    font-size: 16px;
-    line-height: 1.88;
-    color: var(--secondary-font-color);
-  }
-  
-.projects h2 {
-    font-weight: 700;
-    font-size: 18px;
+    /*line-height: 2;*/
     line-height: 36px;
-    margin-bottom: 4px;
     letter-spacing: 0.06em;
+    margin-bottom: 4px;
     color: var(--main-font-color);
+}
+
+.project-category {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-font-color);;
   }
   
+.project-thumb {
+    position: relative;
+    overflow: hidden;
+}
+.projects .item {
+  width: 370px;
+  display: block;
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  transition: box-shadow 250ms var(--animation-timing);
+}
+.project-card {
+  position: relative;
+  border: 1px solid #EEEEEE;
+  border-top: none;
+  padding: 20px 24px;
+}
+
+.card-description {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-overlay);
+
+  padding: 63px 24px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects-list .card-link:hover .card-description,
+.projects-list .card-link:focus .card-description {
+  transform: translateY(-100%);
+}
+.card-description-text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--main-light-color);
+}
+.card-link {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+
+  transition: box-shadow 250ms var(--animation-timing);
+}
+.card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
